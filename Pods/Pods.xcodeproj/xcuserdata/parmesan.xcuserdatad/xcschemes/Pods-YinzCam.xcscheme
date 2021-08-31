@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AF9567E2E2DAB3B820C345F2F5FA4543"
-               BuildableName = "Pods-YinzCam.framework"
+               BuildableName = "Pods_YinzCam.framework"
                BlueprintName = "Pods-YinzCam"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

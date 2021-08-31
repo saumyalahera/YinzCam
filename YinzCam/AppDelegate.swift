@@ -4,6 +4,25 @@
 //
 //  Created by Saumya Lahera on 8/31/21.
 //
+/*
+Important:
+1. Descriptions of UITableView cells
+    1. ScheduleOGFinalTableViewCell - It is the cell with autolayout constraints mentioned in the experiment document.
+    2. ScheduleFinalTableViewCell - It is the cell with autolayout constraints for smaller iphones.
+    3. ScheduleOGRegularTableViewCell - It is the cell with autolayout constraints mentioned in the experiment document.
+    4. ScheduleRegularTableViewCell - It is the cell with autolayout constraints for smaller iphones.
+    
+2. Project Documentation
+    1. I have used basic markup for documentation
+    
+3. I have used Alamofire for
+    1. Fetching JSON
+    2. Getting images which will also handle local caching
+    
+   */
+    
+    
+
 
 import UIKit
 
