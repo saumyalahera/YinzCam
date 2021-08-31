@@ -15,7 +15,6 @@
 		417007D326DE08EE002B6664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417007D126DE08EE002B6664 /* LaunchScreen.storyboard */; };
 		417007E126DE125B002B6664 /* YCScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417007E026DE125B002B6664 /* YCScheduleData.swift */; };
 		417007E326DE129A002B6664 /* YCScheduleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417007E226DE129A002B6664 /* YCScheduleConstants.swift */; };
-		417007E526DE12F3002B6664 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 417007E426DE12F3002B6664 /* Fonts */; };
 		417007EB26DE3697002B6664 /* YCScheduleByeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417007E926DE3697002B6664 /* YCScheduleByeTableViewCell.swift */; };
 		417007EC26DE3697002B6664 /* YCScheduleByeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417007EA26DE3697002B6664 /* YCScheduleByeTableViewCell.xib */; };
 		417007EF26DE36B7002B6664 /* YCScheduleFinalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417007ED26DE36B7002B6664 /* YCScheduleFinalTableViewCell.swift */; };
@@ -30,6 +29,9 @@
 		4170080226DE3A08002B6664 /* YCScheduleSectionHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4170080026DE3A08002B6664 /* YCScheduleSectionHeaderViewCell.xib */; };
 		4170080626DE429B002B6664 /* menuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4170080426DE429B002B6664 /* menuicon.png */; };
 		4170080726DE429B002B6664 /* menuicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4170080526DE429B002B6664 /* menuicon@2x.png */; };
+		4170080C26DED6F5002B6664 /* MavenProBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4170080926DED6F5002B6664 /* MavenProBold.otf */; };
+		4170080D26DED6F5002B6664 /* MavenProRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4170080A26DED6F5002B6664 /* MavenProRegular.otf */; };
+		4170080E26DED6F5002B6664 /* LeagueGothic-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4170080B26DED6F5002B6664 /* LeagueGothic-Regular.otf */; };
 		A7DAE6A397AD65BB3AC5F65A /* Pods_YinzCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABE1C5D6A642840BC5A0CCA /* Pods_YinzCam.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +46,6 @@
 		417007D426DE08EE002B6664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		417007E026DE125B002B6664 /* YCScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCScheduleData.swift; sourceTree = "<group>"; };
 		417007E226DE129A002B6664 /* YCScheduleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCScheduleConstants.swift; sourceTree = "<group>"; };
-		417007E426DE12F3002B6664 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		417007E926DE3697002B6664 /* YCScheduleByeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCScheduleByeTableViewCell.swift; sourceTree = "<group>"; };
 		417007EA26DE3697002B6664 /* YCScheduleByeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YCScheduleByeTableViewCell.xib; sourceTree = "<group>"; };
 		417007ED26DE36B7002B6664 /* YCScheduleFinalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCScheduleFinalTableViewCell.swift; sourceTree = "<group>"; };
@@ -59,6 +60,9 @@
 		4170080026DE3A08002B6664 /* YCScheduleSectionHeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YCScheduleSectionHeaderViewCell.xib; sourceTree = "<group>"; };
 		4170080426DE429B002B6664 /* menuicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon.png; sourceTree = "<group>"; };
 		4170080526DE429B002B6664 /* menuicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuicon@2x.png"; sourceTree = "<group>"; };
+		4170080926DED6F5002B6664 /* MavenProBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MavenProBold.otf; sourceTree = "<group>"; };
+		4170080A26DED6F5002B6664 /* MavenProRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MavenProRegular.otf; sourceTree = "<group>"; };
+		4170080B26DED6F5002B6664 /* LeagueGothic-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LeagueGothic-Regular.otf"; sourceTree = "<group>"; };
 		78F510792BD148114435EEF8 /* Pods-YinzCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YinzCam.debug.xcconfig"; path = "Target Support Files/Pods-YinzCam/Pods-YinzCam.debug.xcconfig"; sourceTree = "<group>"; };
 		7ABE1C5D6A642840BC5A0CCA /* Pods_YinzCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YinzCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC773D90DF7AC4B833CF51F5 /* Pods-YinzCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YinzCam.release.xcconfig"; path = "Target Support Files/Pods-YinzCam/Pods-YinzCam.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,9 +101,9 @@
 		417007C526DE08ED002B6664 /* YinzCam */ = {
 			isa = PBXGroup;
 			children = (
+				4170080826DED6DD002B6664 /* Fonts */,
 				4170080326DE415B002B6664 /* Images */,
 				417007E626DE365A002B6664 /* TableView Cells */,
-				417007E426DE12F3002B6664 /* Fonts */,
 				417007DF26DE1244002B6664 /* Data Models */,
 				417007C626DE08ED002B6664 /* AppDelegate.swift */,
 				417007C826DE08ED002B6664 /* SceneDelegate.swift */,
@@ -147,6 +151,16 @@
 				4170080526DE429B002B6664 /* menuicon@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		4170080826DED6DD002B6664 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4170080B26DED6F5002B6664 /* LeagueGothic-Regular.otf */,
+				4170080926DED6F5002B6664 /* MavenProBold.otf */,
+				4170080A26DED6F5002B6664 /* MavenProRegular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		87A03A2DFBD79419A839B27C /* Frameworks */ = {
@@ -227,14 +241,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				417007F026DE36B7002B6664 /* YCScheduleFinalTableViewCell.xib in Resources */,
-				417007E526DE12F3002B6664 /* Fonts in Resources */,
 				4170080726DE429B002B6664 /* menuicon@2x.png in Resources */,
 				417007F826DE36EB002B6664 /* YCScheduleOGFinalTableViewCell.xib in Resources */,
 				417007EC26DE3697002B6664 /* YCScheduleByeTableViewCell.xib in Resources */,
+				4170080C26DED6F5002B6664 /* MavenProBold.otf in Resources */,
 				4170080226DE3A08002B6664 /* YCScheduleSectionHeaderViewCell.xib in Resources */,
 				417007D326DE08EE002B6664 /* LaunchScreen.storyboard in Resources */,
 				417007FE26DE37AB002B6664 /* YCScheduleOGRegularTableViewCell.xib in Resources */,
 				417007F426DE36D2002B6664 /* YCScheduleRegularTableViewCell.xib in Resources */,
+				4170080E26DED6F5002B6664 /* LeagueGothic-Regular.otf in Resources */,
+				4170080D26DED6F5002B6664 /* MavenProRegular.otf in Resources */,
 				4170080626DE429B002B6664 /* menuicon.png in Resources */,
 				417007D026DE08EE002B6664 /* Assets.xcassets in Resources */,
 				417007CE26DE08ED002B6664 /* Main.storyboard in Resources */,

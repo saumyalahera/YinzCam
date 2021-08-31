@@ -5,17 +5,6 @@
 //  Created by Saumya Lahera on 8/31/21.
 //
 
-/*import UIKit
-
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
-}*/
 import UIKit
 import Alamofire
 import AlamofireImage
@@ -42,7 +31,7 @@ class ViewController: UIViewController {
         self.setupScheduleTableView()
         
         /*setup Navigation Bar*/
-        //self.setupNavigationBar(title: "SCHEDULE")
+        self.setupNavigationBar(title: "SCHEDULE")
         
         /*Fetch and process data*/
         self.fetchScheduleData(YCScheduleConstants.apiEndPoint)
@@ -73,6 +62,14 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return data.sections[section].heading
     }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+    
+    /*func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }*/
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = Bundle.main.loadNibNamed(YCScheduleConstants.sectionHeaderIdentifier, owner: self, options: nil)?.first as! YCScheduleSectionHeaderViewCell
