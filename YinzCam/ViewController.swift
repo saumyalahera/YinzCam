@@ -90,7 +90,6 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
             //If you are using a smaller iphone
             let cell = tableView.dequeueReusableCell(withIdentifier: YCScheduleConstants.finalCellIdentifier, for: indexPath) as! YCScheduleFinalTableViewCell
             
-        
             /*Set some properties*/
             cell.homeTeamName.text = data.team.name ?? "-"
             cell.homeTeamScore.text = currentGame.homeScore ?? "-"
@@ -235,29 +234,15 @@ extension ViewController {
             switch response.result {
             case .success(_):
                 do {
-                    //let filteredData = try JSONDecoder().decode(ScheduleData.self, from: response.data!)
-                    let filteredData = try JSONDecoder().decode(GameList.self, from: response.data!)
-                    //let filteredData = try JSONDecoder().decode(.self, from: response.data!)
                     
-                    //let filteredData = try JSONDecoder().decode(Welcome.self, from: response.data!)
-                    //let welcome = try JSONDecoder().decode(Welcome.self, from: response.data!)
-                   
-                    print(filteredData.gameSections)
+                    let filteredData = try JSONDecoder().decode(GameList.self, from: response.data!)
+                    //print(filteredData.gameSections)
                     
                     self.data.sections = filteredData.gameSections
                     self.data.team = filteredData.team
                     
                     /*Reload data*/
                     self.scheduleTableView.reloadData()
-                    
-                    /*Data extraction happens here*/
-                    /*
-                    self.data.sections = filteredData.gameList.gameSections
-                    self.data.team = filteredData.gameList.team
-                    
-                    /*Reload data*/
-                    self.scheduleTableView.reloadData()
-                    */
                     
                 } catch {
                     print(error)
