@@ -23,10 +23,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        //self.scheduleTableView.contentInset = UIEdgeInsets(top: -22, left: 0, bottom: 0, right: 0) //UIEdgeInsetsMake(-44,0,0,0)
-        
         /*Register this cell because it will fetch information about the cell identifier.*/
         self.registerNibCells()
         
@@ -38,14 +34,7 @@ class ViewController: UIViewController {
         
         /*Fetch and process data*/
         self.fetchScheduleData(YCScheduleConstants.apiEndPoint)
-        
-        /*var frame = CGRect.zero
-        frame.size.height = .leastNormalMagnitude
-        self.scheduleTableView.tableHeaderView = UIView(frame: frame)
-        self.scheduleTableView.tableFooterView = UIView(frame: frame)
-        self.navigationController?.navigationBar.tintColor = UIColor.white*/
-        
-        
+    
     }
     
 //MARK: - UIBarButton Actions
@@ -57,7 +46,6 @@ class ViewController: UIViewController {
         /*Fetch and process data*/
         self.fetchScheduleData(YCScheduleConstants.apiEndPoint)
     }
-    
 }
 
 //MARK: - TableView Methods
@@ -74,20 +62,10 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
         return data.sections[section].heading
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return CGFloat.leastNormalMagnitude
-    }
-    
-    /*func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat.leastNormalMagnitude
-    }*/
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = Bundle.main.loadNibNamed(YCScheduleConstants.sectionHeaderIdentifier, owner: self, options: nil)?.first as! YCScheduleSectionHeaderViewCell
         headerView.sectionTitle.text = data.sections[section].heading?.uppercased() ?? "-"
-        
-        
-        
+        headerView.frame = CGRect(x: 0, y: 0, width: 100, height: self.view.frame.width)
         return headerView
     }
     
@@ -210,6 +188,11 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     func setupScheduleTableView(sectionHeaderHeight: CGFloat = 60, allowCellSelection: Bool = false) {
         self.scheduleTableView.sectionHeaderHeight = sectionHeaderHeight
         self.scheduleTableView.allowsSelection = allowCellSelection
+        
+        //There is some section padding on tableview section
+        if #available(iOS 15.0, *) {
+            self.scheduleTableView.sectionHeaderTopPadding = 0
+        }
     }
     
     /**This function sets up navigation bar with background color, custom fonts and also sets title.
