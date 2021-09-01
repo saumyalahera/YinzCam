@@ -3,7 +3,6 @@
 //  YinzCam
 //
 //  Created by Saumya Lahera on 8/31/21.
-//
 
 import UIKit
 import Alamofire
@@ -24,6 +23,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        //self.scheduleTableView.contentInset = UIEdgeInsets(top: -22, left: 0, bottom: 0, right: 0) //UIEdgeInsetsMake(-44,0,0,0)
+        
         /*Register this cell because it will fetch information about the cell identifier.*/
         self.registerNibCells()
         
@@ -35,6 +38,14 @@ class ViewController: UIViewController {
         
         /*Fetch and process data*/
         self.fetchScheduleData(YCScheduleConstants.apiEndPoint)
+        
+        /*var frame = CGRect.zero
+        frame.size.height = .leastNormalMagnitude
+        self.scheduleTableView.tableHeaderView = UIView(frame: frame)
+        self.scheduleTableView.tableFooterView = UIView(frame: frame)
+        self.navigationController?.navigationBar.tintColor = UIColor.white*/
+        
+        
     }
     
 //MARK: - UIBarButton Actions
@@ -74,6 +85,9 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = Bundle.main.loadNibNamed(YCScheduleConstants.sectionHeaderIdentifier, owner: self, options: nil)?.first as! YCScheduleSectionHeaderViewCell
         headerView.sectionTitle.text = data.sections[section].heading?.uppercased() ?? "-"
+        
+        
+        
         return headerView
     }
     
@@ -208,6 +222,20 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
         [NSAttributedString.Key.foregroundColor: UIColor.white,
          NSAttributedString.Key.font: UIFont(name: fontName, size: fontSize)!]
         self.title = title
+        
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = YCScheduleConstants.navigationBarColor
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                              NSAttributedString.Key.font: UIFont(name: fontName, size: fontSize)!]
+            //appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor,NSAttributedString.Key.font: UIFont(resource: R.font.robotoMedium, size: fontSize)!]
+
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        }
+        
     }
 }
 
