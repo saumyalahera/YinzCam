@@ -200,25 +200,14 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
      - Parameter fontName: Navigation font name. Its default value is set in ScheduleConstant Class
      - Parameter fontSize: Navigation font size*/
     func setupNavigationBar(title: String, fontName: String = YCScheduleConstants.navigationBarTitleFontName, fontSize: CGFloat = 25) {
-        self.navigationController?.navigationBar.barTintColor = YCScheduleConstants.navigationBarColor
-        self.navigationController?.navigationBar.titleTextAttributes =
-        [NSAttributedString.Key.foregroundColor: UIColor.white,
-         NSAttributedString.Key.font: UIFont(name: fontName, size: fontSize)!]
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = YCScheduleConstants.navigationBarColor
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                          NSAttributedString.Key.font: UIFont(name: fontName, size: fontSize)!]
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
         self.title = title
-        
-        if #available(iOS 13.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = YCScheduleConstants.navigationBarColor
-            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
-                                              NSAttributedString.Key.font: UIFont(name: fontName, size: fontSize)!]
-            //appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor,NSAttributedString.Key.font: UIFont(resource: R.font.robotoMedium, size: fontSize)!]
-
-            navigationController?.navigationBar.standardAppearance = appearance
-            navigationController?.navigationBar.compactAppearance = appearance
-            navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        }
-        
     }
 }
 
