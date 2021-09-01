@@ -34,8 +34,12 @@ class ViewController: UIViewController {
         
         /*Fetch and process data*/
         self.fetchScheduleData(YCScheduleConstants.apiEndPoint)
-    
+        
+        /*Real is*/
+        print("Current Time: \(self.getCurrentDate(isoDate: "2021-09-01T21:52:49Z"))")
     }
+    
+//MARK: - Date Format Functions
     
 //MARK: - UIBarButton Actions
     @IBAction func toggleMenu(_ sender: Any) {
@@ -138,7 +142,8 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
             cell.awayTeamRecord.text = currentGame.awayScore ?? "-"
             cell.gameDate.text = (currentGame.date?.text ?? "-").uppercased()
             cell.gameWeek.text = (currentGame.week ?? "-").uppercased()
-            cell.gameTime.text = (currentGame.gameState ?? "-").uppercased()
+            //Make sure to convert it to the right time
+            cell.gameTime.text = self.getCurrentDate(isoDate: (currentGame.date?.timeStamp ?? "-")).uppercased()
             
             /*Dynamic font size*/
             cell.gameDate.adjustsFontSizeToFitWidth = true
@@ -255,6 +260,29 @@ extension ViewController {
             /*Dismiss alert view*/
             alert.dismiss(animated: true, completion: nil)
         }
+    }
+}
+
+extension ViewController {
+    
+//MARK: - Date formatter
+    
+    func getCurrentDate(isoDate: String) -> String {
+
+        let localISOFormatter = ISO8601DateFormatter()
+        localISOFormatter.timeZone = TimeZone.current
+        let datestring = isoDate
+        let date = localISOFormatter.date(from: datestring)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a"
+        dateFormatter.timeZone = TimeZone.current
+        
+        if let date_x = date {
+            print()
+            return "\(dateFormatter.string(from: date_x))"
+        }
+        return ""
     }
 }
 
