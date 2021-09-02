@@ -39,8 +39,6 @@ class ViewController: UIViewController {
         print("Current Time: \(self.getCurrentDate(isoDate: "2021-09-01T21:52:49Z"))")
     }
     
-//MARK: - Date Format Functions
-    
 //MARK: - UIBarButton Actions
     @IBAction func toggleMenu(_ sender: Any) {
         print("Toggle Menu")
@@ -264,8 +262,7 @@ extension ViewController {
 }
 
 extension ViewController {
-    
-//MARK: - Date formatter
+//MARK: - Date Format Functions
     
     func getCurrentDate(isoDate: String) -> String {
 
